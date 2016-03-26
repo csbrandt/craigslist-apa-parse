@@ -1,0 +1,38 @@
+{
+  "name": "craigslist-apa-parse",
+  "version": "1.0.0",
+  "description": "Given an RSS feed from the apts/housing section of craigslist, return an array of JSON posts with pertinent information parsed out",
+  "main": "index.js",
+  "scripts": {
+    "test": "coffee -c test/tests.coffee && make test",
+    "debug": "node-debug _mocha",
+    "coverage": "istanbul cover _mocha test --recursive -- -u      exports -R spec",
+    "build": "browserify index.js > dist/bundle.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/csbrandt/craigslist-apa-parse.git"
+  },
+  "keywords": [
+    "craigslist",
+    "apartments",
+    "housing",
+    "rentals",
+    "parser"
+  ],
+  "author": "csbrandt",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/csbrandt/craigslist-apa-parse/issues"
+  },
+  "homepage": "https://github.com/csbrandt/craigslist-apa-parse",
+  "devDependencies": {
+    "browserify": "^13.0.0",
+    "expect.js": "^0.3.1",
+    "istanbul": "^0.4.2",
+    "mocha": "^2.4.5"
+  },
+  "dependencies": {
+    "feedparser": "^1.1.4"
+  }
+}
