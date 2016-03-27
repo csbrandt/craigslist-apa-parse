@@ -36,6 +36,13 @@
       });
       return expect(titles.length).to.equal(100);
     });
+    it('should return 100 posts with a url', function() {
+      var urls;
+      urls = parsedPosts.filter(function(post) {
+        return post.url;
+      });
+      return expect(urls.length).to.equal(100);
+    });
     it('should return x posts with a location', function() {
       var locations;
       locations = parsedPosts.filter(function(post) {

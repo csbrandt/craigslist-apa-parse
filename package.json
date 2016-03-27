@@ -1,6 +1,6 @@
 {
   "name": "craigslist-apa-parse",
-  "version": "1.0.0",
+  "version": "1.1.0",
   "description": "Given an RSS feed from the apts/housing section of craigslist, return an array of JSON posts with pertinent information parsed out",
   "main": "index.js",
   "scripts": {

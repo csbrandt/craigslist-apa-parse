@@ -2,8 +2,8 @@ TN:
 SF:/home/csbrandt/projects/craigslist-apa-parse/index.js
 FN:8,(anonymous_1)
 FN:12,(anonymous_2)
-FN:39,(anonymous_3)
-FN:43,(anonymous_4)
+FN:40,(anonymous_3)
+FN:44,(anonymous_4)
 FNF:4
 FNH:3
 FNDA:1,(anonymous_1)
@@ -35,12 +35,12 @@ DA:25,100
 DA:26,100
 DA:27,100
 DA:29,100
-DA:39,1
-DA:40,0
-DA:43,1
+DA:40,1
+DA:41,0
 DA:44,1
-DA:47,1
+DA:45,1
 DA:48,1
+DA:49,1
 LF:31
 LH:30
 BRDA:23,1,0,99

@@ -19,6 +19,7 @@ parse(rss, cb)
     + location
     + price
     + bedroom
+    + url
 
 
 Running Tests

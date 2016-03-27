@@ -32,7 +32,8 @@ parser.parse = function(rss, cb) {
             title: item.title,
             location: location,
             price: price,
-            bedroom: bedroom
+            bedroom: bedroom,
+            url: item.link
          });
       }
    });

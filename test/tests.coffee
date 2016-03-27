@@ -26,6 +26,11 @@ describe 'parser', ->
          return post.title
       expect(titles.length).to.equal 100
 
+   it 'should return 100 posts with a url', ->
+      urls = parsedPosts.filter (post) ->
+         return post.url
+      expect(urls.length).to.equal 100
+
    it 'should return x posts with a location', ->
       locations = parsedPosts.filter (post) ->
          return post.location
