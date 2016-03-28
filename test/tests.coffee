@@ -31,17 +31,17 @@ describe 'parser', ->
          return post.url
       expect(urls.length).to.equal 100
 
-   it 'should return x posts with a location', ->
+   it 'should return 99 posts with a location', ->
       locations = parsedPosts.filter (post) ->
          return post.location
       expect(locations.length).to.equal 99
 
-   it 'should return x posts with a price', ->
+   it 'should return 96 posts with a price', ->
       locations = parsedPosts.filter (post) ->
          return post.price
       expect(locations.length).to.equal 96
 
-   it 'should return x posts with bedrooms', ->
+   it 'should return 90 posts with bedrooms', ->
       locations = parsedPosts.filter (post) ->
          return post.bedroom
       expect(locations.length).to.equal 90

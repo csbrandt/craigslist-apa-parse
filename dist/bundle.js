@@ -3,7 +3,8 @@ var FeedParser = require('feedparser');
 var url = require('url');
 var parens = /(\()([^\)]*)(\))/;
 var dollars = /(\$)[A-Fa-f\d]+\b/;
-var alpha = /[^\d]/g;
+var uniDollars = /(\&\#x0024\;)[A-Fa-f\d]+\b/;
+var bd = /\d\d*(?=bd)/g;
 var parser = exports;
 
 parser.parse = function(rss, cb) {
@@ -22,10 +23,10 @@ parser.parse = function(rss, cb) {
          tokens = item.title.split(parens);
          city = url.parse(item.link).host.split('.')[0];
          location = (tokens.length > 3) ? tokens[tokens.lastIndexOf('(') + 1] + ' ' + city : undefined;
-         price = tokens[tokens.length - 1].match(dollars);
-         price = (price) ? price[0] : undefined;
-         bedroom = tokens[tokens.length - 1].split(' ');
-         bedroom = (bedroom.length > 2) ? bedroom[bedroom.length - 1].replace(alpha, '') : undefined;
+         price = tokens[tokens.length - 1].match(dollars) || tokens[tokens.length - 1].match(uniDollars);
+         price = (price && price.length) ? price[0].replace('&#x0024;', '').replace('$', '') : undefined;
+         bedroom = item.title.match(bd);
+         bedroom = (bedroom && bedroom.length) ? bedroom[0] : undefined;
 
          posts.push({
             date: item['dc:date']['#'],

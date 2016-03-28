@@ -43,21 +43,21 @@
       });
       return expect(urls.length).to.equal(100);
     });
-    it('should return x posts with a location', function() {
+    it('should return 99 posts with a location', function() {
       var locations;
       locations = parsedPosts.filter(function(post) {
         return post.location;
       });
       return expect(locations.length).to.equal(99);
     });
-    it('should return x posts with a price', function() {
+    it('should return 96 posts with a price', function() {
       var locations;
       locations = parsedPosts.filter(function(post) {
         return post.price;
       });
       return expect(locations.length).to.equal(96);
     });
-    return it('should return x posts with bedrooms', function() {
+    return it('should return 90 posts with bedrooms', function() {
       var locations;
       locations = parsedPosts.filter(function(post) {
         return post.bedroom;
